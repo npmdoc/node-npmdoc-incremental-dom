@@ -1,0 +1,864 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/google/incremental-dom#readme">incremental-dom (v0.5.1)</a>
+</h1>
+<h4>An in-place virtual DOM library</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.incremental-dom">module incremental-dom</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.applyAttr">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>applyAttr
+            <span class="apidocSignatureSpan">(el, name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.applyProp">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>applyProp
+            <span class="apidocSignatureSpan">(el, name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.attr">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>attr
+            <span class="apidocSignatureSpan">(name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.currentElement">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>currentElement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.currentPointer">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>currentPointer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.elementClose">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>elementClose
+            <span class="apidocSignatureSpan">(tag)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.elementOpen">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>elementOpen
+            <span class="apidocSignatureSpan">(tag, key, statics, var_args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.elementOpenEnd">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>elementOpenEnd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.elementOpenStart">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>elementOpenStart
+            <span class="apidocSignatureSpan">(tag, key, statics)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.elementVoid">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>elementVoid
+            <span class="apidocSignatureSpan">(tag, key, statics, var_args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.importNode">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>importNode
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.patch">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>patch
+            <span class="apidocSignatureSpan">(node, fn, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.patchInner">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>patchInner
+            <span class="apidocSignatureSpan">(node, fn, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.patchOuter">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>patchOuter
+            <span class="apidocSignatureSpan">(node, fn, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.skip">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>skip
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.skipNode">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>skipNode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.text">
+            function <span class="apidocSignatureSpan">incremental-dom.</span>text
+            <span class="apidocSignatureSpan">(value, var_args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">incremental-dom.</span>attributes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">incremental-dom.</span>notifications</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">incremental-dom.</span>symbols</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.incremental-dom.attributes">module incremental-dom.attributes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.attributes.__default">
+            function <span class="apidocSignatureSpan">incremental-dom.attributes.</span>__default
+            <span class="apidocSignatureSpan">(el, name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.incremental-dom.attributes.style">
+            function <span class="apidocSignatureSpan">incremental-dom.attributes.</span>style
+            <span class="apidocSignatureSpan">(el, name, style)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.incremental-dom" id="apidoc.module.incremental-dom">module incremental-dom</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.applyAttr" id="apidoc.element.incremental-dom.applyAttr">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>applyAttr
+        <span class="apidocSignatureSpan">(el, name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">applyAttr = function (el, name, value) {
+  if (value == null) {
+    el.removeAttribute(name);
+  } else {
+    var attrNS = getNamespace(name);
+    if (attrNS) {
+      el.setAttributeNS(attrNS, name, value);
+    } else {
+      el.setAttribute(name, value);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.applyProp" id="apidoc.element.incremental-dom.applyProp">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>applyProp
+        <span class="apidocSignatureSpan">(el, name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">applyProp = function (el, name, value) {
+  el[name] = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.attr" id="apidoc.element.incremental-dom.attr">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>attr
+        <span class="apidocSignatureSpan">(name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attr = function (name, value) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertInAttributes('attr');
+  }
+
+  argsBuilder.push(name);
+  argsBuilder.push(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.currentElement" id="apidoc.element.incremental-dom.currentElement">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>currentElement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">currentElement = function () {
+  if (process.env.NODE_ENV !== 'production') {
+    assertInPatch('currentElement', context);
+    assertNotInAttributes('currentElement');
+  }
+  return (/** @type {!Element} */currentParent
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.currentPointer" id="apidoc.element.incremental-dom.currentPointer">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>currentPointer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">currentPointer = function () {
+  if (process.env.NODE_ENV !== 'production') {
+    assertInPatch('currentPointer', context);
+    assertNotInAttributes('currentPointer');
+  }
+  return getNextNode();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.elementClose" id="apidoc.element.incremental-dom.elementClose">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>elementClose
+        <span class="apidocSignatureSpan">(tag)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">elementClose = function (tag) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNotInAttributes('elementClose');
+  }
+
+  var node = coreElementClose();
+
+  if (process.env.NODE_ENV !== 'production') {
+    assertCloseMatchesOpenTag(getData(node).nodeName, tag);
+  }
+
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.elementOpen" id="apidoc.element.incremental-dom.elementOpen">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>elementOpen
+        <span class="apidocSignatureSpan">(tag, key, statics, var_args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">elementOpen = function (tag, key, statics, var_args) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNotInAttributes('elementOpen');
+    assertNotInSkip('elementOpen');
+  }
+
+  var node = coreElementOpen(tag, key);
+  var data = getData(node);
+
+  if (!data.staticsApplied) {
+    if (statics) {
+      for (var _i = 0; _i &lt; statics.length; _i += 2) {
+        var name =<span class="apidocCodeCommentSpan"> /** @type {string} */statics[_i];
+        var value = statics[_i + 1];
+        updateAttribute(node, name, value);
+      }
+    }
+    // Down the road, we may want to keep track of the statics array to use it
+    // as an additional signal about whether a node matches or not. For now,
+    // just use a marker so that we do not reapply statics.
+    data.staticsApplied = true;
+  }
+
+  /*
+   * Checks to see if one or more attributes have changed for a given Element.
+   * When no attributes have changed, this is much faster than checking each
+   * individual argument. When attributes have changed, the overhead of this is
+   * minimal.
+   */
+</span>  var attrsArr = data.attrsArr;
+  var newAttrs = data.newAttrs;
+  var isNew = !attrsArr.length;
+  var i = ATTRIBUTES_OFFSET;
+  var j = 0;
+
+  for (; i &lt; arguments.length; i += 2, j += 2) {
+    var _attr = arguments[i];
+    if (isNew) {
+      attrsArr[j] = _attr;
+      newAttrs[_attr] = undefined;
+    } else if (attrsArr[j] !== _attr) {
+      break;
+    }
+
+    var value = arguments[i + 1];
+    if (isNew || attrsArr[j + 1] !== value) {
+      attrsArr[j + 1] = value;
+      updateAttribute(node, _attr, value);
+    }
+  }
+
+  if (i &lt; arguments.length || j &lt; attrsArr.length) {
+    for (; i &lt; arguments.length; i += 1, j += 1) {
+      attrsArr[j] = arguments[i];
+    }
+
+    if (j &lt; attrsArr.length) {
+      attrsArr.length = j;
+    }
+
+    /*
+     * Actually perform the attribute update.
+     */
+    for (i = 0; i &lt; attrsArr.length; i += 2) {
+      var name = /** @type {string} */attrsArr[i];
+      var value = attrsArr[i + 1];
+      newAttrs[name] = value;
+    }
+
+    for (var _attr2 in newAttrs) {
+      updateAttribute(node, _attr2, newAttrs[_attr2]);
+      newAttrs[_attr2] = undefined;
+    }
+  }
+
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.elementOpenEnd" id="apidoc.element.incremental-dom.elementOpenEnd">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>elementOpenEnd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">elementOpenEnd = function () {
+  if (process.env.NODE_ENV !== 'production') {
+    assertInAttributes('elementOpenEnd');
+    setInAttributes(false);
+  }
+
+  var node = elementOpen.apply(null, argsBuilder);
+  argsBuilder.length = 0;
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.elementOpenStart" id="apidoc.element.incremental-dom.elementOpenStart">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>elementOpenStart
+        <span class="apidocSignatureSpan">(tag, key, statics)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">elementOpenStart = function (tag, key, statics) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNotInAttributes('elementOpenStart');
+    setInAttributes(true);
+  }
+
+  argsBuilder[0] = tag;
+  argsBuilder[1] = key;
+  argsBuilder[2] = statics;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.elementVoid" id="apidoc.element.incremental-dom.elementVoid">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>elementVoid
+        <span class="apidocSignatureSpan">(tag, key, statics, var_args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">elementVoid = function (tag, key, statics, var_args) {
+  elementOpen.apply(null, arguments);
+  return elementClose(tag);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.importNode" id="apidoc.element.incremental-dom.importNode">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>importNode
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">importNode = function (node) {
+  if (node['__incrementalDOMData']) {
+    return;
+  }
+
+  var isElement = node instanceof Element;
+  var nodeName = isElement ? node.localName : node.nodeName;
+  var key = isElement ? node.getAttribute('key') : null;
+  var data = initData(node, nodeName, key);
+
+  if (key) {
+    getData(node.parentNode).keyMap[key] = node;
+  }
+
+  if (isElement) {
+    var attributes = node.attributes;
+    var attrs = data.attrs;
+    var newAttrs = data.newAttrs;
+    var attrsArr = data.attrsArr;
+
+    for (var i = 0; i &lt; attributes.length; i += 1) {
+      var attr = attributes[i];
+      var name = attr.name;
+      var value = attr.value;
+
+      attrs[name] = value;
+      newAttrs[name] = undefined;
+      attrsArr.push(name);
+      attrsArr.push(value);
+    }
+  }
+
+  for (var child = node.firstChild; child; child = child.nextSibling) {
+    importNode(child);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.patch" id="apidoc.element.incremental-dom.patch">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>patch
+        <span class="apidocSignatureSpan">(node, fn, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patch = function (node, fn, data) {
+  var prevContext = context;
+  var prevDoc = doc;
+  var prevCurrentNode = currentNode;
+  var prevCurrentParent = currentParent;
+  var previousInAttributes = false;
+  var previousInSkip = false;
+
+  context = new Context();
+  doc = node.ownerDocument;
+  currentParent = node.parentNode;
+
+  if (process.env.NODE_ENV !== 'production') {
+    previousInAttributes = setInAttributes(false);
+    previousInSkip = setInSkip(false);
+  }
+
+  var focusPath = getFocusedPath(node, currentParent);
+  markFocused(focusPath, true);
+  var retVal = run(node, fn, data);
+  markFocused(focusPath, false);
+
+  if (process.env.NODE_ENV !== 'production') {
+    assertVirtualAttributesClosed();
+    setInAttributes(previousInAttributes);
+    setInSkip(previousInSkip);
+  }
+
+  context.notifyChanges();
+
+  context = prevContext;
+  doc = prevDoc;
+  currentNode = prevCurrentNode;
+  currentParent = prevCurrentParent;
+
+  return retVal;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.patchInner" id="apidoc.element.incremental-dom.patchInner">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>patchInner
+        <span class="apidocSignatureSpan">(node, fn, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patchInner = function (node, fn, data) {
+  var prevContext = context;
+  var prevDoc = doc;
+  var prevCurrentNode = currentNode;
+  var prevCurrentParent = currentParent;
+  var previousInAttributes = false;
+  var previousInSkip = false;
+
+  context = new Context();
+  doc = node.ownerDocument;
+  currentParent = node.parentNode;
+
+  if (process.env.NODE_ENV !== 'production') {
+    previousInAttributes = setInAttributes(false);
+    previousInSkip = setInSkip(false);
+  }
+
+  var focusPath = getFocusedPath(node, currentParent);
+  markFocused(focusPath, true);
+  var retVal = run(node, fn, data);
+  markFocused(focusPath, false);
+
+  if (process.env.NODE_ENV !== 'production') {
+    assertVirtualAttributesClosed();
+    setInAttributes(previousInAttributes);
+    setInSkip(previousInSkip);
+  }
+
+  context.notifyChanges();
+
+  context = prevContext;
+  doc = prevDoc;
+  currentNode = prevCurrentNode;
+  currentParent = prevCurrentParent;
+
+  return retVal;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.patchOuter" id="apidoc.element.incremental-dom.patchOuter">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>patchOuter
+        <span class="apidocSignatureSpan">(node, fn, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patchOuter = function (node, fn, data) {
+  var prevContext = context;
+  var prevDoc = doc;
+  var prevCurrentNode = currentNode;
+  var prevCurrentParent = currentParent;
+  var previousInAttributes = false;
+  var previousInSkip = false;
+
+  context = new Context();
+  doc = node.ownerDocument;
+  currentParent = node.parentNode;
+
+  if (process.env.NODE_ENV !== 'production') {
+    previousInAttributes = setInAttributes(false);
+    previousInSkip = setInSkip(false);
+  }
+
+  var focusPath = getFocusedPath(node, currentParent);
+  markFocused(focusPath, true);
+  var retVal = run(node, fn, data);
+  markFocused(focusPath, false);
+
+  if (process.env.NODE_ENV !== 'production') {
+    assertVirtualAttributesClosed();
+    setInAttributes(previousInAttributes);
+    setInSkip(previousInSkip);
+  }
+
+  context.notifyChanges();
+
+  context = prevContext;
+  doc = prevDoc;
+  currentNode = prevCurrentNode;
+  currentParent = prevCurrentParent;
+
+  return retVal;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.skip" id="apidoc.element.incremental-dom.skip">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>skip
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">skip = function () {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNoChildrenDeclaredYet('skip', currentNode);
+    setInSkip(true);
+  }
+  currentNode = currentParent.lastChild;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.skipNode" id="apidoc.element.incremental-dom.skipNode">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>skipNode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">skipNode = function () {
+  currentNode = getNextNode();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.text" id="apidoc.element.incremental-dom.text">
+        function <span class="apidocSignatureSpan">incremental-dom.</span>text
+        <span class="apidocSignatureSpan">(value, var_args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">text = function (value, var_args) {
+  if (process.env.NODE_ENV !== 'production') {
+    assertNotInAttributes('text');
+    assertNotInSkip('text');
+  }
+
+  var node = coreText();
+  var data = getData(node);
+
+  if (data.text !== value) {
+    data.text =<span class="apidocCodeCommentSpan"> /** @type {string} */value;
+
+    var formatted = value;
+    for (var i = 1; i &lt; arguments.length; i += 1) {
+      /*
+       * Call the formatter function directly to prevent leaking arguments.
+       * https://github.com/google/incremental-dom/pull/204#issuecomment-178223574
+       */
+</span>      var fn = arguments[i];
+      formatted = fn(formatted);
+    }
+
+    node.data = formatted;
+  }
+
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.incremental-dom.attributes" id="apidoc.module.incremental-dom.attributes">module incremental-dom.attributes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.attributes.__default" id="apidoc.element.incremental-dom.attributes.__default">
+        function <span class="apidocSignatureSpan">incremental-dom.attributes.</span>__default
+        <span class="apidocSignatureSpan">(el, name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">__default = function (el, name, value) {
+  var type = typeof value;
+
+  if (type === 'object' || type === 'function') {
+    applyProp(el, name, value);
+  } else {
+    applyAttr(el, name, /** @type {?(boolean|number|string)} */value);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.incremental-dom.attributes.style" id="apidoc.element.incremental-dom.attributes.style">
+        function <span class="apidocSignatureSpan">incremental-dom.attributes.</span>style
+        <span class="apidocSignatureSpan">(el, name, style)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">style = function (el, name, style) {
+  if (typeof style === 'string') {
+    el.style.cssText = style;
+  } else {
+    el.style.cssText = '';
+    var elStyle = el.style;
+    var obj = /** @type {!Object&lt;string,string&gt;} */style;
+
+    for (var prop in obj) {
+      if (has(obj, prop)) {
+        setStyleValue(elStyle, prop, obj[prop]);
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
